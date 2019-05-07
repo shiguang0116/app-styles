@@ -1,4 +1,4 @@
-﻿# 移动端通用样式
+﻿# app-styles
 
 > 一个基于移动端编写的通用样式文件
 
@@ -9,12 +9,11 @@ app-styles/
 ├── dist/
 │   ├── common.css      通用样式
 │   └── common.min.css  通用样式（压缩后）
-├── demo/
-│   └── index.html      示例模板
-└── src/
-    ├── custom.less     变量
-    ├── reset.less      重置样式
-    ├── layout.less     布局样式
-    ├── common.less     定义通用的样式
-    └── index.less      引入样式文件
+├── src/
+│   ├── custom.less     变量
+│   ├── reset.less      重置样式
+│   ├── layout.less     布局样式
+│   ├── common.less     定义通用的样式
+│   └── index.less      引入样式文件
+└── index.html          示例模板
 ```
