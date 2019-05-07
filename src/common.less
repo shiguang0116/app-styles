@@ -1,0 +1,44 @@
+// layout
+.w {
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-left: (@grid-gutter-width + px);
+    padding-right: (@grid-gutter-width + px);
+}
+.h{  
+    padding-top: (@grid-gutter-width + px);
+    padding-bottom: (@grid-gutter-width + px);
+}
+.space {
+    margin-top: (@grid-gutter-width + px);
+}
+.hide {
+    display: none;
+}
+
+// text
+.text{
+    &-left {
+        text-align: left;
+    }
+    &-right {
+        text-align: right;
+    }
+    &-center {
+        text-align: center;
+    }
+    &-color {
+        color: @text-color;
+    }
+    &-error {
+        color: @error-color;
+    }
+}
+.nowrap {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.break-word {
+    word-wrap: break-word;
+}
