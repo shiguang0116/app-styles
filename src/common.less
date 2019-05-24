@@ -10,8 +10,36 @@
 .space {
     margin-top: @grid-gutter-width;
 }
+.full{
+    width: 100%;
+}
 .hide {
     display: none;
+}
+// 浮动
+.flt{
+    float: left;
+}
+.frt{
+    float: right;
+}
+.clear{ 
+    clear: both; 
+    margin: 0;
+    padding: 0;
+}
+
+// link
+.link{
+    color: @link-color;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover{
+        color: @link-hover-color;
+    }
+}
+.pointer{ 
+    cursor: pointer;
 }
 
 // text
@@ -31,12 +59,12 @@
     &-error {
         color: @error-color;
     }
-}
-.nowrap {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-.break-word {
-    word-wrap: break-word;
+    &-nowrap {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    &-break-word {
+        word-wrap: break-word;
+    }
 }

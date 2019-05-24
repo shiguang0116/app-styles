@@ -1,0 +1,42 @@
+@import '../src/index';
+
+.title{
+    color: rgb(240, 92, 92);
+}
+
+// flex布局
+ul.flex{
+    &>li{
+        height: 30px;
+        background-color: pink;
+    }
+}
+
+// 已知宽高
+.p-father{
+    height: 100px;
+    margin-bottom: 10px;
+    background-color: #abcdef;
+    position: relative;
+}
+.p-child{
+    @w: 150px;
+    @h: 50px;
+    width: @w;
+    height: @h;
+    background-color: pink;
+    z-index: @zindex-modal;
+    .centered(absolute; @w; @h);
+}
+// 未知宽高
+.pw-child{
+    background-color: pink;
+    .centered(absolute);
+}
+
+// 左右等高
+.equal-cell{
+    margin-bottom: 10px;
+    border: 1px solid;
+    background-color: #abcdef;
+}

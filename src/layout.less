@@ -1,4 +1,4 @@
-// flex
+// flex布局
 .flex {
     display: flex;
     flex-direction: row;
@@ -28,6 +28,7 @@
     &-around {
         justify-content: space-around;
     }
+
     // y轴顶部对齐
     &-top {
         align-items: flex-start;
@@ -40,5 +41,68 @@
     &-bottom {
         align-items: flex-end;
     }
+
+    // 多轴线
+    &-col-start {
+        align-content: flex-start;
+    }
+    &-col-center {
+        align-content: center;
+    }
+    &-col-end {
+        align-content: flex-end;
+    }
+    &-col-between {
+        align-content: space-between;
+    }
+    &-col-around {
+        align-content: space-around;
+    }
 }
 
+// 居中布局
+
+// 宽高已知
+.centered(@_; @w; @h){
+    left: 50%;
+    top: 50%;
+    margin-left: -(@w/2);
+    margin-top: -(@h/2);
+}
+.centered(fixed; @w; @h){
+    position: fixed;
+}
+.centered(absolute; @w; @h){
+    position: absolute;
+}
+// 宽高未知
+.centered(@_){
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
+.centered(fixed){
+    position: fixed;
+}
+.centered(absolute){
+    position: absolute;
+}
+
+// 左右等高
+.equal{
+    // width: 100%;
+    // display: table;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap:20px;
+}
+// .equal-cell{
+//     display: table-cell;
+//     margin-right: 20px;
+// }
+
+// 左侧固定，右侧自适应

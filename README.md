@@ -17,13 +17,12 @@ npm i app-styles -S
 ```
 app-styles/
 ├── dist/
-│   ├── common.css      通用样式
-│   └── common.min.css  通用样式（压缩后）
+│   └── base.less   通用样式（合并后）
 ├── src/
 │   ├── custom.less     变量
 │   ├── reset.less      重置样式
 │   ├── layout.less     布局样式
 │   ├── common.less     定义通用的样式
 │   └── index.less      引入样式文件
-└── index.html      示例模板
+└── example/      用例
 ```
